@@ -5,14 +5,16 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <h1>Office Details</h1>
+  <h1><%= p %> company details</h1>
 
-  <form>
-    <h1><%= name %></h1>
-    <h3>Pros: <%= pros %></h3>
-    <h3>Cons: <%= cons %></h3>
-    <h3>Rating: <%= rating %></h3>
-  </form>
+  <% details.forEach(function(detail) { %>
+    <div class="office-detail">
+      <h2><%= detail.name %></h2>
+      <p>Pros: <%= detail.pros %></p>
+      <p>Cons: <%= detail.cons %></p>
+      <p>Rating: <%= detail.rating %></p>
+    </div>
+  <% }); %>
 
   <a href="/" class="button">Back to Home</a>
   

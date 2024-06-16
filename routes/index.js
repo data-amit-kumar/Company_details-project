@@ -3,7 +3,6 @@ var router = express.Router();
 
 let offDetails = require("../models/c_model");
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
@@ -24,8 +23,8 @@ router.post('/create', async function(req, res) {
 
 router.post('/search', async function(req, res) {
   try {
-    const foundDetails = await offDetails.findOne({ name: req.body.cname });
-    res.render("search", foundDetails);
+    const foundDetails = await offDetails.find({ name: req.body.cname });
+    res.render("search",{p:req.body.cname, details: foundDetails });
   } catch (error) {
     res.status(500).send(error);
   }
