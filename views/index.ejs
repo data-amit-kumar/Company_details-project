@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Details</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1>Office Details</h1>
+
+  <form action="/create" method="post">
+    <label for="fname">
+      Name:
+      <input name="name" id="fname" type="text" placeholder="Name">
+    </label>
+
+    <label for="pros">
+      Pros:
+      <input name="pros" id="pros" type="text" placeholder="Pros">
+    </label>
+
+    <label for="cons">
+      Cons:
+      <input name="cons" id="cons" type="text" placeholder="Cons">
+    </label>
+    
+    <label for="rating">
+      Rating:
+      <input name="rating" id="rating" type="number" placeholder="Rating">
+    </label>
+    
+    <button type="submit">Send</button>
+
+  </form>
+  <br><br><br>
+  <form action="/search" method="post">
+    <label for="search">
+      <input name="cname" type="text" placeholder="Seach Company">
+    </label>
+      <button type="Submit">Search</button>
+  </form>
+  
+</body>
+</html>
